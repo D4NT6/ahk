@@ -20,5 +20,6 @@ RunAsAdmin()
 	ExitApp
 }
 
-=::ExitApp
--::Suspend
+-::
+    Suspend, Toggle
+Return
