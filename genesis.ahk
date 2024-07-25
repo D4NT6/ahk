@@ -1,29 +1,37 @@
-#Requires AutoHotkey v2.0
+RunAsAdmin()
 
-f8::
-    {
-        Send("{F4}")
-        Sleep(500)
-        Click("223, 34 Left, 1")
-        Sleep(500)
-        Click("459, 384 Left, 1")
-        Sleep(500)
-        Click("955, 409 Left, 1")
-        Sleep(500)
-        Click("1635, 609 Left, 1")
-        Sleep(500)
-        Send("{Enter}")
-        Sleep(500)
-        Send("{Raw}Ready")
-        Sleep(500)
-        Send("{Enter}")
-        Sleep(500)
-        Send("{F1}")
-                
-    }
+F8::
+Send, {F4}
+Sleep, 300
+Click, 214, 37
+Sleep, 300
+Click, 456, 389
+Sleep, 300
+Click, 953, 416
+Sleep, 300
+Click, 1629, 605
+Sleep, 300
+Send, {Enter}
+Sleep, 500
+Send, Ready
+Sleep, 500
+Send, {Enter}
+Sleep, 500
+Send, {F1}
+Return
 
 -::
-    {
-        Suspend "1"
-    }
+    Suspend, Toggle
 Return
+
+RunAsAdmin()
+{
+	Global 0
+	IfEqual, A_IsAdmin, 1, Return 0
+	
+	Loop, %0%
+		params .= A_Space . %A_Index%
+	
+	DllCall("shell32\ShellExecute" (A_IsUnicode ? "":"A"),uint,0,str,"RunAs",str,(A_IsCompiled ? A_ScriptFullPath : A_AhkPath),str,(A_IsCompiled ? "": """" . A_ScriptFullPath . """" . A_Space) params,str,A_WorkingDir,int,1)
+	ExitApp
+}
