@@ -1,4 +1,4 @@
-﻿/*
+/*
 		hyde.dll hides a process from the Task-Manager on Windows2k/Windows7 (x86/x64 bit)!
 
 		Your process can inject it into other processes however you like.  The example uses
