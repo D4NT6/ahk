@@ -21,7 +21,3 @@ RunAsAdmin()
 	DllCall("shell32\ShellExecute" (A_IsUnicode ? "":"A"),uint,0,str,"RunAs",str,(A_IsCompiled ? A_ScriptFullPath : A_AhkPath),str,(A_IsCompiled ? "": """" . A_ScriptFullPath . """" . A_Space) params,str,A_WorkingDir,int,1)
 	ExitApp
 }
-
--::
-    Suspend, Toggle
-Return
