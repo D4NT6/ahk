@@ -20,10 +20,6 @@ Sleep, 500
 Send, {F1}
 Return
 
--::
-    Suspend, Toggle
-Return
-
 RunAsAdmin()
 {
 	Global 0
