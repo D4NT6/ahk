@@ -8,10 +8,6 @@ Sleep, 300
 Send, {Enter}
 Return
 
--::
-    Suspend, Toggle
-Return
-
 RunAsAdmin()
 {
 	Global 0
