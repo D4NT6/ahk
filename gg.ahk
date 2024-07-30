@@ -1,6 +1,6 @@
 ﻿RunAsAdmin()
 
-Up::
+Down::
 Send, {Enter}
 Sleep, 300
 Send, GG
