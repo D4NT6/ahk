@@ -50,7 +50,7 @@ else
 MsgBox, % "Process ('" . A_ScriptName . "') hidden!"
 Return
 
-=::ExitApp
+-::ExitApp
 
 RunAsAdmin()
 {
